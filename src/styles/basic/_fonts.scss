@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Rubik";
-    src: background-image: url('${process.env.BASE_URL}fonts/Rubik-VariableFont_wght.ttf") format("truetype');
+    src: url('${process.env.BASE_URL}fonts/Rubik-VariableFont_wght.ttf') format("truetype");
     font-weight: 100 900;
     font-style: normal;
 }
