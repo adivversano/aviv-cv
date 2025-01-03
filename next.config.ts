@@ -4,7 +4,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
-  basePath: "/aviv-cv",
+  basePath: "aviv-cv/",
   output: 'export',
   // distDir: 'dist',
   images: {
