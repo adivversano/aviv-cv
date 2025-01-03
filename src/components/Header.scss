@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 116px;
+
+    .navbar {
+        display: flex;
+        gap: 20px;
+        font-weight: 100;
+        font-size: 18px;
+        > li {
+            align-self: center;
+            &.download-cv-btn {
+                .cv {
+                    margin-left: 5px;
+                }
+            }
+            
+        }
+    }
+}

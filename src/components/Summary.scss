@@ -1,0 +1,53 @@
+.summary-wrapper {
+    .bg-vector {
+        background-image: url("/assets/summary-bg.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: #0d1119;
+        width: 100%;
+        height: 300px;
+    }
+
+    background-color: #d9e5ff;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .hand-vector {
+        background-image: url("/assets/hand-vector.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 0%, 10%;
+        height: 641px;
+        width: 746px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        top: 0;
+        margin: auto;
+    }
+
+    .summary {
+        .title {
+            font-weight: 700;
+            font-size: 96px;
+            margin-bottom: 20px;
+            color: #0d1119;
+        }
+        .description {
+            font-size: 24px;
+            max-width: 591px;
+            color: #0d1119;
+            opacity: 0.7;
+            line-height: 1.5;
+            > span {
+                display: inline-block;
+                margin-top: 40px;
+            }
+        }
+    }
+}

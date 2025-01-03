@@ -1,0 +1,14 @@
+.main-container {
+}
+
+.inner-container {
+    width: 100%;
+    max-width: 1520px;
+    margin-inline: 20px;
+}
+
+@media screen and (min-width: 1520px) {
+    .inner-container {
+        margin: auto;
+    }
+}
