@@ -3,68 +3,162 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 125px;
+    margin-top: 330px;
     margin-bottom: 330px;
 
+    @media screen and (min-width: 840px) {
+        margin-top: 125px;
+    }
+
     .my-name {
-        font-size: 96px;
+        opacity: 0.8;
+        font-size: 38px;
+
+        @media screen and (min-width: 840px) {
+            font-size: 66px;
+        }
+        @media screen and (min-width: 1575px) {
+            font-size: 96px;
+        }
     }
     .sub-title {
         text-align: center;
-        font-size: 170px;
         font-weight: 700;
-        max-width: 1073px;
         position: relative;
+        font-size: 77px;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 400px;
+
+        @media screen and (min-width: 840px) {
+            max-width: 740px;
+            font-size: 120px;
+        }
+
+        @media screen and (min-width: 1575px) {
+            font-size: 170px;
+            max-width: 1025px;
+        }
         .text {
             line-height: 0.85;
+            &:first-child {
+                display: block;
+                margin-left: 10px;
+                @media screen and (min-width: 840px) {
+                    width: 100%;
+                    margin-left: unset;
+                }
+            }
+            &:nth-child(2) {
+                margin-left: 24px;
+                @media screen and (min-width: 1575px) {
+                    margin-left: 38px;
+                }
+            }
+            // &.first-text {
+            //     color: transparent;
+            //     &::before {
+            //         color: white;
+            //         content: 'מעצב חווית משתמש';
+            //     }
+            // }
+            @media screen and (min-width: 1575px) {
+            }
         }
         .cloud-vector {
-            background-image: url('/aviv-cv/assets/hero-vector.svg');
+            background-image: url('/aviv-cv/assets/hero-vector.svg");
             background-repeat: no-repeat;
             background-size: contain;
             background-position: 0%, 10%;
-            height: 313px;
-            width: 415px;
             z-index: -1;
             position: absolute;
-            right: -18%;
-            bottom: -15%;
+            aspect-ratio: 415/313;
+            transform: scaleX(-1);
+            right: -9%;
+            bottom: -42%;
+            height: 401px;
+
+            @media screen and (min-width: 840px) {
+                transform: unset;
+                right: -18%;
+                bottom: -15%;
+                height: 240px;
+            }
+            @media screen and (min-width: 1575px) {
+                height: 313px;
+            }
         }
         .aviv-cartoon {
-            background-image: url('/aviv-cv/./assets/aviv-cartoon.svg');
+            background-image: url('/aviv-cv/assets/aviv-cartoon.svg");
             background-repeat: no-repeat;
             background-size: contain;
             background-position: 0%, 10%;
-            height: 285px;
-            width: 285px;
             z-index: -1;
             position: absolute;
-            right: -4%;
-            bottom: 33%;
+            height: 200px;
+            top: -181%;
+            aspect-ratio: 1/1;
+            
+            @media screen and (min-width: 840px) {
+                top: unset;
+                right: -4%;
+                bottom: 33%;
+                height: 215px;
+            }
+
+            @media screen and (min-width: 1575px) {
+                height: 285px;
+            }
         }
         .doggo {
-            background-image: url('/aviv-cv/assets/hero-doggo.svg');
+            background-image: url('/aviv-cv/assets/hero-doggo.svg");
             background-repeat: no-repeat;
             background-size: contain;
             background-position: 0%, 10%;
-            height: 133px;
-            width: 130px;
+            height: 82px;
             position: absolute;
-            left: -2.7%;
-            bottom: 29%;
+            right: 0;
+            bottom: 79%;
+            aspect-ratio: 130/133;
+
+            @media screen and (min-width: 840px) {
+                right: unset;
+                left: -2.7%;
+                bottom: 29%;
+                height: 100px;
+            }
+
+            @media screen and (min-width: 1575px) {
+                right: unset;
+                left: -2.7%;
+                bottom: 29%;
+                height: 133px;
+            }
         }
         .arrow-vector {
-            background-image: url('/aviv-cv/assets/hero-vector2.svg');
+            background-image: url('/aviv-cv/assets/hero-vector2.svg");
             background-repeat: no-repeat;
             background-size: contain;
             background-position: 0%, 10%;
-            height: 48px;
-            width: 48px;
+            height: 44px;
             position: absolute;
             left: 0;
             right: 0;
             margin: auto;
-            bottom: -30px;
+            aspect-ratio: 1/1;
+            bottom: -100%;
+            
+            @media screen and (min-width: 840px) {
+                bottom: -20px;
+                height: 32px;
+            }
+
+            @media screen and (min-width: 1575px) {
+                bottom: -30px;
+                height: 48px;
+            }
         }
     }
 }

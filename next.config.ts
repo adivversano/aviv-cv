@@ -1,18 +1,19 @@
 import type { NextConfig } from "next";
+import path from "path";
 
 // const isProduction = process.env.NODE_ENV === 'production';
 
 const nextConfig: NextConfig = {
   /* config options here */
-  basePath: "/aviv-cv",
-  assetPrefix: "/aviv-cv",
+  // basePath: "/aviv-cv",
+  // assetPrefix: "/aviv-cv",
   output: 'export',
   // distDir: 'dist',
   images: {
     unoptimized: true
   },
-  env: {
-    BASE_URL: 'https://adivversano.github.io/aviv-cv/',
+  sassOptions: {
+    includePaths: [path.join(__dirname, 'styles')],
   },
 };
 

@@ -1,7 +1,8 @@
 .footer-wrapper {
     background-color: #0d1119;
     .footer {
-        height: 100vh;
+        // height: 100vh;
+        padding-block: 100px;
         display: flex;
         align-items: center;
         .left-container {
