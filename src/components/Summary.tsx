@@ -3,7 +3,6 @@ import './Summary.scss';
 const Summary = () => {
     return (
         <div className="summary-wrapper">
-            <div className="bg-vector"/>
             <div className="hand-vector"/>
             <div className="summary inner-container">
                 <h2 className="title">יום נעים</h2>

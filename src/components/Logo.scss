@@ -1,0 +1,13 @@
+
+.logo-desktop {
+    display: none;
+}
+
+@media screen and (min-width: 840px) {
+    .logo-mobile {
+        display: none;
+    }   
+    .logo-desktop {
+        display: block;
+    }
+}

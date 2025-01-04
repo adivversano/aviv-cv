@@ -2,7 +2,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 116px;
+    height: 102px;
+
+    @media screen and (min-width: 840px) {
+        height: 116px;
+    }
 
     .navbar {
         display: flex;
@@ -11,12 +15,40 @@
         font-size: 18px;
         > li {
             align-self: center;
+            
+            &.projects-btn,
             &.download-cv-btn {
-                .cv {
-                    margin-left: 5px;
+                display: none;
+            }
+            .contact-btn {
+                padding: 6px 19px;
+                font-size: 16px;
+                .arrow {
+                    font-size: 10px;
+                    margin-right: 5px;
+                }
+                @media screen and (min-width: 840px) {
+                    padding: 8px 24px;
+                    font-size: 18px;
                 }
             }
-            
+            .hamburger-btn {
+                padding: 0;
+            }
+            @media screen and (min-width: 840px) {
+                &.projects-btn,
+                &.download-cv-btn {
+                    display: block;
+                }
+                &.hamburger-btn-container {
+                    display: none;
+                }
+                &.download-cv-btn {
+                    .cv {
+                        margin-left: 5px;
+                    }
+                }
+            }
         }
     }
 }

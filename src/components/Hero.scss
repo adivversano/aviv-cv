@@ -3,11 +3,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 330px;
-    margin-bottom: 330px;
+    padding-top: 370px;
+    padding-bottom: 268px;
+    overflow: hidden;
 
     @media screen and (min-width: 840px) {
-        margin-top: 125px;
+        padding-top: 125px;
+        padding-bottom: 330px;
     }
 
     .my-name {
@@ -25,7 +27,7 @@
         text-align: center;
         font-weight: 700;
         position: relative;
-        font-size: 77px;
+        font-size: 68px;
 
         display: flex;
         flex-wrap: wrap;
@@ -45,14 +47,16 @@
             line-height: 0.85;
             &:first-child {
                 display: block;
-                margin-left: 10px;
+                margin-left: 14px;
                 @media screen and (min-width: 840px) {
                     width: 100%;
                     margin-left: unset;
                 }
             }
             &:nth-child(2) {
-                margin-left: 24px;
+                @media screen and (min-width: 840px) {
+                    margin-left: 24px;
+                }
                 @media screen and (min-width: 1575px) {
                     margin-left: 38px;
                 }
@@ -68,7 +72,7 @@
             }
         }
         .cloud-vector {
-            background-image: url("/aviv-cv/assets/hero-vector.svg");
+            background-image: url("/assets/hero-vector.svg");
             background-repeat: no-repeat;
             background-size: contain;
             background-position: 0%, 10%;
@@ -76,8 +80,10 @@
             position: absolute;
             aspect-ratio: 415/313;
             transform: scaleX(-1);
-            right: -9%;
+            right: -15%;
             bottom: -42%;
+            // right: -9%;
+            // bottom: -42%;
             height: 401px;
 
             @media screen and (min-width: 840px) {
@@ -91,14 +97,15 @@
             }
         }
         .aviv-cartoon {
-            background-image: url("/aviv-cv/assets/aviv-cartoon.svg");
+            background-image: url("/assets/aviv-cartoon.svg");
             background-repeat: no-repeat;
             background-size: contain;
             background-position: 0%, 10%;
             z-index: -1;
             position: absolute;
             height: 200px;
-            top: -181%;
+            // top: -181%;
+            top: -207%;
             aspect-ratio: 1/1;
 
             @media screen and (min-width: 840px) {
@@ -113,7 +120,7 @@
             }
         }
         .doggo {
-            background-image: url("/aviv-cv/assets/hero-doggo.svg");
+            background-image: url("/assets/hero-doggo.svg");
             background-repeat: no-repeat;
             background-size: contain;
             background-position: 0%, 10%;
@@ -122,8 +129,10 @@
             right: 0;
             bottom: 79%;
             aspect-ratio: 130/133;
+            transform: rotate(7deg);
 
             @media screen and (min-width: 840px) {
+                transform: unset;
                 right: unset;
                 left: -2.7%;
                 bottom: 29%;
@@ -138,7 +147,7 @@
             }
         }
         .arrow-vector {
-            background-image: url("/aviv-cv/assets/hero-vector2.svg");
+            background-image: url("/assets/hero-vector2.svg");
             background-repeat: no-repeat;
             background-size: contain;
             background-position: 0%, 10%;
@@ -148,7 +157,7 @@
             right: 0;
             margin: auto;
             aspect-ratio: 1/1;
-            bottom: -100%;
+            bottom: -125%;
 
             @media screen and (min-width: 840px) {
                 bottom: -20px;
@@ -161,4 +170,16 @@
             }
         }
     }
+}
+
+.bg-curve-vector {
+    background-image: url("/assets/summary-bg.svg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #0d1119;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    aspect-ratio: 1728 / 981;
 }
