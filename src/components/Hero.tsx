@@ -13,7 +13,7 @@ const Hero = () => {
                     <div className="cloud-vector" />
                     <div className="aviv-cartoon" />
                     <div className="doggo" />
-                    <div className="arrow-vector" />
+                    <a className="arrow-vector" href="#summary"/>
                 </h1>
             </div>
             <div className="bg-curve-vector" />

@@ -3,8 +3,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 370px;
-    padding-bottom: 268px;
+    // padding-top: 370px;
+    // padding-bottom: 268px;
+    height: calc(100vh - 100px - 102px) ;
     overflow: hidden;
 
     @media screen and (min-width: 840px) {
@@ -72,7 +73,7 @@
             }
         }
         .cloud-vector {
-            background-image: url("/assets/hero-vector.svg");
+            background-image: url("/aviv-cv/assets/hero-vector.svg");
             background-repeat: no-repeat;
             background-size: contain;
             background-position: 0%, 10%;
@@ -97,7 +98,7 @@
             }
         }
         .aviv-cartoon {
-            background-image: url("/assets/aviv-cartoon.svg");
+            background-image: url("/aviv-cv/assets/aviv-cartoon.svg");
             background-repeat: no-repeat;
             background-size: contain;
             background-position: 0%, 10%;
@@ -120,7 +121,7 @@
             }
         }
         .doggo {
-            background-image: url("/assets/hero-doggo.svg");
+            background-image: url("/aviv-cv/assets/hero-doggo.svg");
             background-repeat: no-repeat;
             background-size: contain;
             background-position: 0%, 10%;
@@ -147,7 +148,7 @@
             }
         }
         .arrow-vector {
-            background-image: url("/assets/hero-vector2.svg");
+            background-image: url("/aviv-cv/assets/hero-vector2.svg");
             background-repeat: no-repeat;
             background-size: contain;
             background-position: 0%, 10%;
@@ -173,13 +174,13 @@
 }
 
 .bg-curve-vector {
-    background-image: url("/assets/summary-bg.svg");
+    background-image: url("/aviv-cv/assets/summary-bg.svg");
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #0d1119;
     width: 100%;
-    height: 100px;
+    height: 145px;
     overflow: hidden;
     aspect-ratio: 1728 / 981;
 }

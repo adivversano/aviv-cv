@@ -4,7 +4,7 @@ const Summary = () => {
     return (
         <div className="summary-wrapper">
             <div className="hand-vector"/>
-            <div className="summary inner-container">
+            <div className="summary inner-container" id="summary">
                 <h2 className="title">יום נעים</h2>
                 <p className="description">
                     ברוכים הבאים לגלקסיה שלי ביקום הענק הזה של אינטרנט,

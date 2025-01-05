@@ -1,42 +1,78 @@
 .summary-wrapper {
-
-
     background-color: #d9e5ff;
     width: 100%;
-    height: 100vh;
     position: relative;
 
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    flex-direction: column-reverse;
+    overflow: hidden;
+
+    @media screen and (min-width: 1370px) {
+        overflow: unset;
+        flex-direction: column;
+        height: 100vh;
+    }
 
     .hand-vector {
-        background-image: url('/assets/hand-vector.svg');
+        background-image: url("/aviv-cv/assets/hand-vector.svg");
         background-repeat: no-repeat;
-        background-size: contain;
-        background-position: 0%, 10%;
-        height: 641px;
-        width: 746px;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        top: 0;
-        margin: auto;
+        background-size: cover;
+        background-position: center;
+        aspect-ratio: 724 / 641;
+        margin-right: -10px;
+        height: 433px;
+
+        @media screen and (min-width: 840px) {
+            width: 632px;
+            align-self: end;
+        }
+        
+        @media screen and (min-width: 1370px) {
+            align-self: unset;
+            background-size: contain;
+            background-position: 0%, 10%;
+            height: 641px;
+            width: unset;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            top: 0;
+            margin: auto;
+        }
     }
 
     .summary {
+        width: fit-content;
+        margin: auto;
+        @media screen and (min-width: 1370px) {
+            width: unset;
+            margin: unset;
+        }
         .title {
             font-weight: 700;
-            font-size: 96px;
+            font-size: 48px;
             margin-bottom: 20px;
+            @media screen and (min-width: 840px) {
+                font-size: 77px;
+            }
+            @media screen and (min-width: 1510px) {
+                font-size: 96px;
+            }
             color: #0d1119;
         }
         .description {
-            font-size: 24px;
+            font-size: 18px;
             max-width: 591px;
             color: #0d1119;
             opacity: 0.7;
             line-height: 1.5;
+            @media screen and (min-width: 840px) {
+                font-size: 22px;
+            }
+            @media screen and (min-width: 1510px) {
+                font-size: 24px;
+            }
             > span {
                 display: inline-block;
                 margin-top: 40px;
