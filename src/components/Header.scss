@@ -1,51 +1,75 @@
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 102px;
+.header-wrapper {
+    background-color: #0d1119;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 
-    @media screen and (min-width: 840px) {
-        height: 116px;
-    }
-
-    .navbar {
+    .header-container {
+        height: 102px;
         display: flex;
-        gap: 20px;
-        font-weight: 100;
-        font-size: 18px;
-        > li {
-            align-self: center;
-            
-            &.projects-btn,
-            &.download-cv-btn {
-                display: none;
-            }
-            .contact-btn {
-                padding: 6px 19px;
-                font-size: 16px;
-                .arrow {
-                    font-size: 10px;
-                    margin-right: 5px;
-                }
-                @media screen and (min-width: 840px) {
-                    padding: 8px 24px;
-                    font-size: 18px;
+        align-items: center;
+        justify-content: space-between;
+
+        @media screen and (min-width: 840px) {
+            height: 116px;
+        }
+
+        &.white {
+            background-color: #d9e5ff;
+            color: #0d1119;
+            .navbar {
+                > li {
+                    &.download-cv-btn {
+                        svg > * {
+                            stroke: #0d1119;
+                        }
+                    }
                 }
             }
-            .hamburger-btn {
-                padding: 0;
-            }
-            @media screen and (min-width: 840px) {
-                &.projects-btn,
-                &.download-cv-btn {
-                    display: block;
-                }
-                &.hamburger-btn-container {
-                    display: none;
-                }
-                &.download-cv-btn {
-                    .cv {
-                        margin-left: 5px;
+        }
+        nav {
+            height: 100%;
+            display: flex;
+            .navbar {
+                display: flex;
+                gap: 20px;
+                font-weight: 100;
+                font-size: 18px;
+                > li {
+                    align-self: center;
+
+                    &.projects-btn,
+                    &.download-cv-btn {
+                        display: none;
+                    }
+                    .contact-btn {
+                        // padding: 6px 19px;
+                        font-size: 16px;
+                        .arrow {
+                            font-size: 10px;
+                            margin-right: 5px;
+                        }
+                        @media screen and (min-width: 840px) {
+                            // padding: 8px 24px;
+                            font-size: 18px;
+                        }
+                    }
+                    .hamburger-btn {
+                        padding: 0;
+                    }
+                    @media screen and (min-width: 840px) {
+                        &.projects-btn,
+                        &.download-cv-btn {
+                            display: block;
+                        }
+                        &.hamburger-btn-container {
+                            display: none;
+                        }
+                        &.download-cv-btn {
+                            .cv {
+                                margin-left: 5px;
+                            }
+                        }
                     }
                 }
             }

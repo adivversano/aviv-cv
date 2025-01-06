@@ -1,0 +1,31 @@
+.project {
+    display: flex;
+    flex-direction: column;
+    max-width: 793px;
+    margin: auto;
+    text-align: right;
+
+    .title {
+        font-size: 60px;
+        margin-bottom: 40px;
+        font-weight: 700;
+        color: #0d1119;
+    }
+
+    .description {
+        font-size: 24px;
+        font-weight: 400;
+        color: #757d8e;
+
+        > p {
+            line-height: 1.8;
+            // >span {
+            //     padding: 0 5px;
+            // }
+            > strong {
+                color: #0d1119;
+                font-weight: 700;
+            }
+        }
+    }
+}

@@ -12,7 +12,7 @@ const Footer = () => {
 
                     <h3 className="sub-title">אשמח אם נעבוד ביחד</h3>
 
-                    <Button className="project-btn" variant="">
+                    <Button className="project-btn lg" variant="">
                         <span className="text bold">אני עניינתי אותך?</span>
                         <span className="text">יש לי עוד קצת ביכולות ←</span>
                     </Button>

@@ -16,6 +16,7 @@
     .my-name {
         opacity: 0.8;
         font-size: 38px;
+        z-index: 2;
 
         @media screen and (min-width: 840px) {
             font-size: 66px;
@@ -46,6 +47,7 @@
         }
         .text {
             line-height: 0.85;
+            z-index: 2;
             &:first-child {
                 display: block;
                 margin-left: 14px;
@@ -86,6 +88,7 @@
             // right: -9%;
             // bottom: -42%;
             height: 401px;
+            z-index: 1;
 
             @media screen and (min-width: 840px) {
                 transform: unset;
@@ -102,7 +105,7 @@
             background-repeat: no-repeat;
             background-size: contain;
             background-position: 0%, 10%;
-            z-index: -1;
+            z-index: 1;
             position: absolute;
             height: 200px;
             // top: -181%;
@@ -131,6 +134,7 @@
             bottom: 79%;
             aspect-ratio: 130/133;
             transform: rotate(7deg);
+            z-index: 2;
 
             @media screen and (min-width: 840px) {
                 transform: unset;
@@ -163,6 +167,7 @@
             @media screen and (min-width: 840px) {
                 bottom: -20px;
                 height: 32px;
+                pointer-events: none;
             }
 
             @media screen and (min-width: 1575px) {

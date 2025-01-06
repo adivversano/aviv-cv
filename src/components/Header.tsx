@@ -3,36 +3,50 @@
 import Logo from '@/components/Logo';
 import { IconDownload } from '@/icons/IconDownload';
 import IconHamburger from '@/icons/IconHamburger';
+import { useAppStore } from '@/store/store';
+import { useEffect } from 'react';
 import { Button } from 'react-bootstrap';
 import './Header.scss';
+import Link from 'next/link';
 
-const Header = () => {
+type HeaderProps = {
+    isDark?: boolean
+}
+
+const Header = ({ isDark = true }: HeaderProps) => {
+    // const isDark = useAppStore(state => state.header.isDark);
     return (
-        <div className="header inner-container">
-            <Logo />
+        <div className={`header-wrapper${isDark ? '' : ' white'}`}>
+            <div className="header-container inner-container">
+                <Logo />
 
-            <nav>
-                <ul className="navbar">
-                    <li className="projects-btn">עבודות</li>
-                    <li className="download-cv-btn">
-                        <span className="cv">
-                            קורות חיים
-                        </span>
-                        <IconDownload />
-                    </li>
-                    <li>
-                        <Button className="contact-btn" variant="" onClick={() => console.log('111')}>
-                            דברו איתי
-                            <span className='arrow'>←</span>
-                        </Button>
-                    </li>
-                    <li className="hamburger-btn-container">
-                        <Button className="hamburger-btn" variant="" bsPrefix='reset-btn'>
-                            <IconHamburger />
-                        </Button>
-                    </li>
-                </ul>
-            </nav>
+                <nav>
+                    <ul className="navbar">
+                        <li className="projects-btn">עבודות</li>
+                        <li className="download-cv-btn">
+                            <span className="cv">
+                                קורות חיים
+                            </span>
+                            <IconDownload />
+                        </li>
+                        <li>
+                            <Link
+                                className={`contact-btn btn${isDark ? '' : ' white'}`}
+                                href="/project/111"
+                                data-text="← דברו איתי"
+                            >
+                                דברו איתי
+                                <span className='arrow'>←</span>
+                            </Link>
+                        </li>
+                        <li className="hamburger-btn-container">
+                            <Button className="hamburger-btn" variant="" bsPrefix='reset-btn'>
+                                <IconHamburger />
+                            </Button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     )
 }

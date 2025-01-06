@@ -1,10 +1,13 @@
 
 import Link from 'next/link';
 import './Logo.scss';
+import { useAppStore } from '@/store/store';
 
 const Logo = () => {
+    const isDark = useAppStore(state => state.header.isDark);
+
     return (
-        <Link href="/">
+        <Link href="/" className={`logo-container${isDark ? '' : ' white'}`}>
             <svg className="logo-mobile" width="66" height="36" viewBox="0 0 66 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clipPath="url(#clip0_255_460)">
                     <path d="M20.9718 19.2215H16.4311C15.3166 16.5415 12.7021 14.7942 9.80183 14.7942H7.96695L9.42132 11.2931H13.1384L10.4343 4.78167L4.43585 19.2215H0L8.30856 0.5H12.5838L20.9718 19.2215Z" fill="#F2F8FC" />
