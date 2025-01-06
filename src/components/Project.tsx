@@ -1,7 +1,13 @@
+import { ReactNode } from 'react';
 import './Project.scss';
 
 type ProjectProps = {
-    project: any
+    project: {
+        sector1: {
+            title: string
+            description: ReactNode
+        }
+    }
 }
 
 const Project = ({ project }: ProjectProps) => {
