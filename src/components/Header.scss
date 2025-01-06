@@ -4,19 +4,10 @@
     top: 0;
     z-index: 100;
 
-    .header-container {
-        height: 102px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-        @media screen and (min-width: 840px) {
-            height: 116px;
-        }
-
-        &.white {
-            background-color: #d9e5ff;
-            color: #0d1119;
+    &.white {
+        background-color: #d9e5ff;
+        color: #0d1119;
+        .header-container {
             .navbar {
                 > li {
                     &.download-cv-btn {
@@ -27,6 +18,18 @@
                 }
             }
         }
+    }
+
+    .header-container {
+        height: 102px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media screen and (min-width: 840px) {
+            height: 116px;
+        }
+
         nav {
             height: 100%;
             display: flex;
