@@ -16,7 +16,7 @@ const Header = ({ isDark = true }: HeaderProps) => {
     return (
         <div className={`header-wrapper${isDark ? '' : ' white'}`}>
             <div className="header-container inner-container">
-                <Logo />
+                <Logo isDark={isDark}/>
 
                 <nav>
                     <ul className="navbar">
