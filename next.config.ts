@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
   /* config options here */
   basePath: "/aviv-cv",
   assetPrefix: "/aviv-cv",
-  // output: 'export',
+  output: 'export',
   reactStrictMode: false,
   // distDir: 'dist',
   images: {
