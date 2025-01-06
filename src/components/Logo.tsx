@@ -1,10 +1,8 @@
 
 import Link from 'next/link';
 import './Logo.scss';
-import { useAppStore } from '@/store/store';
 
-const Logo = () => {
-    const isDark = useAppStore(state => state.header.isDark);
+const Logo = ({ isDark }: { isDark: boolean }) => {
 
     return (
         <Link href="/" className={`logo-container${isDark ? '' : ' white'}`}>

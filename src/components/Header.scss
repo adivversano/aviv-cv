@@ -8,11 +8,13 @@
         background-color: #d9e5ff;
         color: #0d1119;
         .header-container {
-            .navbar {
-                > li {
-                    &.download-cv-btn {
-                        svg > * {
-                            stroke: #0d1119;
+            nav {
+                .navbar {
+                    > li {
+                        &.download-cv-btn {
+                            svg > * {
+                                stroke: #0d1119;
+                            }
                         }
                     }
                 }
