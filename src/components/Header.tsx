@@ -3,11 +3,9 @@
 import Logo from '@/components/Logo';
 import { IconDownload } from '@/icons/IconDownload';
 import IconHamburger from '@/icons/IconHamburger';
-import { useAppStore } from '@/store/store';
-import { useEffect } from 'react';
+import Link from 'next/link';
 import { Button } from 'react-bootstrap';
 import './Header.scss';
-import Link from 'next/link';
 
 type HeaderProps = {
     isDark?: boolean

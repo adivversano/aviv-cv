@@ -1,6 +1,10 @@
 import './Project.scss';
 
-const Project = ({ project }: any) => {
+type ProjectProps = {
+    project: any
+}
+
+const Project = ({ project }: ProjectProps) => {
 
     const { sector1 } = project;
 

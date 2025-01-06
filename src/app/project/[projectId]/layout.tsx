@@ -1,9 +1,7 @@
 'use client'
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import { useAppStore } from "@/store/store";
 import Head from "next/head";
-import { useEffect } from "react";
 import styles from './layout.module.scss';
 
 export default function RootLayout({
@@ -11,7 +9,7 @@ export default function RootLayout({
 }: Readonly<{
     children: React.ReactNode;
 }>) {
-    
+
     return (
         <div className={styles['project-layout']}>
             <Head>
