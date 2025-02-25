@@ -102,7 +102,7 @@ const Projects = () => {
                                 <MyButton className="project-btn" text="לצפייה בפרויקט" />
                             </article>
                             <div className='project-graphic'>
-                                <Image src={image} fill alt="project graphic image" />
+                                <Image src={image} height={465} width={640} layout="responsive" alt="project graphic image" />
                             </div>
                         </div>
                     )
