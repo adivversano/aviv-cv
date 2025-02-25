@@ -12,7 +12,7 @@ const projects = [
         date: '2024',
         field: 'משאבי האנוש',
         product: 'עיצוב ואפיון המערכת',
-        image: '/aviv-cv/assets/project-mehula.png'
+        imgUrl: '/aviv-cv/assets/project-mehula.png'
     },
     {
         projectId: 2,
@@ -23,7 +23,7 @@ const projects = [
         date: '2024',
         field: 'פיתוח תוכנה',
         product: 'עיצוב לוגו ואתר רספונסיבי',
-        image: '/aviv-cv/assets/project-diffreacting.png'
+        imgUrl: '/aviv-cv/assets/project-diffreacting.png'
     },
     {
         projectId: 3,
@@ -35,7 +35,7 @@ const projects = [
         date: '2024',
         field: 'איפור ואופנה',
         product: 'מיתוג ועיצוב לוגו',
-        image: '/aviv-cv/assets/project-glamspot.png'
+        imgUrl: '/aviv-cv/assets/project-glamspot.png'
     },
     {
         projectId: 4,
@@ -47,7 +47,7 @@ const projects = [
         date: '2024',
         field: 'עולם הדיגיטל',
         product: 'עיצוב לוגו ואתר רספונסיבי',
-        image: '/aviv-cv/assets/project-rize.png'
+        imgUrl: '/aviv-cv/assets/project-rize.png'
     },
     {
         projectId: 5,
@@ -57,7 +57,7 @@ const projects = [
         date: '2024',
         field: 'מכירת ציוד',
         product: 'איפיון ועיצוב אתר סחר',
-        image: '/aviv-cv/assets/project-buyon.png'
+        imgUrl: '/aviv-cv/assets/project-buyon.png'
     },
     {
         projectId: 6,
@@ -68,7 +68,7 @@ const projects = [
         date: '2023',
         field: 'מסחר מוצר',
         product: 'עיצוב ואפיון מערכות חישוב',
-        image: '/aviv-cv/assets/project-avery-dennison.png'
+        imgUrl: '/aviv-cv/assets/project-avery-dennison.png'
     }
 ]
 
@@ -85,7 +85,7 @@ const Projects = () => {
     return (
         <div className="projects-wrapper">
             <div className="projects">
-                {projects.map(({ title, description, date, field, product, image }, index) => {
+                {projects.map(({ title, description, date, field, product, imgUrl }, index) => {
                     return (
                         <div className="project" key={index}>
                             <article className="project-content">
@@ -101,9 +101,13 @@ const Projects = () => {
 
                                 <MyButton className="project-btn" text="לצפייה בפרויקט" />
                             </article>
-                            <div className='project-graphic'>
-                                <Image src={image} height={465} width={640} layout="responsive" alt="project graphic image" />
-                            </div>
+                            <Image className='project-graphic'
+                                src={imgUrl}
+                                height={465}
+                                width={640}
+                                layout="responsive"
+                                alt="project graphic image"
+                            />
                         </div>
                     )
                 }
