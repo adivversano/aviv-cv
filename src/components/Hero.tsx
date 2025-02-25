@@ -1,6 +1,5 @@
-import { motion, useScroll, useTransform, Variants } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import './Hero.scss';
-import { useEffect } from 'react';
 
 const containerVariants: Variants = {
     hidden: {},
@@ -54,21 +53,7 @@ const dogVariants: Variants = {
 
 }
 
-const curveVariants: Variants = {
-    hidden: { opacity: 0 },
-    show: {
-        opacity: 1,
-        transition: {
-            type: 'spring',
-            stiffness: 80,
-            damping: 20,
-        },
-    },
-};;
-
 const Hero = () => {
-    const { scrollY } = useScroll();
-    const y = useTransform(scrollY, [0, 500], [0, -200]); // Moves up as you scroll
     return (
         <>
             {/* 

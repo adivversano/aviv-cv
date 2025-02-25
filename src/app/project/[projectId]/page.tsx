@@ -21,12 +21,12 @@ export async function generateStaticParams() {
     ]
 }
 
-type ProjectPageProps = {
-    params: Promise<{
-        projectId: number
-    }>
+// type ProjectPageProps = {
+//     params: Promise<{
+//         projectId: number
+//     }>
 
-}
+// }
 
 const project = {
     projectId: '111',
@@ -36,8 +36,7 @@ const project = {
     }
 }
 
-const ProjectPage = async ({ params }: ProjectPageProps) => {
-    const param = await params;
+const ProjectPage = async () => {
     return (
         <div className={styles['project-container']}>
             <Project project={project} />

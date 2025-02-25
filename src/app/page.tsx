@@ -31,7 +31,7 @@ export default function Home() {
     if (isDark) return;
 
     setIsDark(true);
-  }, [])
+  });
 
   return (
     <motion.div

@@ -1,19 +1,9 @@
 import SummaryBgVector from '@/assets/summary-bg-vector.svg';
 import SummaryHandVector from '@/assets/summary-hand-vector.svg';
 import Character from '@/components/Character';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { useRef } from 'react';
+import { motion } from 'framer-motion';
 
 const Summary = () => {
-    const targetRef = useRef(null);
-    const { scrollYProgress } = useScroll({
-        target: targetRef,
-        offset: ['25% 25%', '25% 25%']
-    })
-
-    // const move = 
-    const rotate = useTransform(scrollYProgress, [0, 1], ['0deg', '90deg']);
-
     return (
         <motion.div
             className="summary-wrapper"

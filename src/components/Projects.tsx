@@ -1,6 +1,4 @@
-import { Button } from 'react-bootstrap';
-import Link from 'next/link';
-import { desc, fieldset, image } from 'framer-motion/client';
+import Image from 'next/image';
 import { MyButton } from './MyButton';
 
 const projects = [
@@ -103,7 +101,7 @@ const Projects = () => {
 
                                 <MyButton className="project-btn" text="לצפייה בפרויקט" />
                             </article>
-                            <img className="project-graphic" src={image} />
+                            <Image className="project-graphic" src={image} fill alt="project graphic image"/>
                         </div>
                     )
                 }

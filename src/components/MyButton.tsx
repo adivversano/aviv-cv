@@ -1,8 +1,13 @@
-import React, { useRef } from 'react'
+import React, { useRef } from 'react';
 
-export const MyButton = ({ className, text }: any) => {
-    const ref = useRef<any>(null);
-    const btnRef = useRef<any>(null)
+type MyButtonProps = {
+    className: string,
+    text: string
+}
+
+export const MyButton = ({ className, text }: MyButtonProps) => {
+    const ref = useRef<HTMLSpanElement>(null);
+    const btnRef = useRef<HTMLAnchorElement>(null)
 
     const handleOrigin = (e: React.MouseEvent<HTMLAnchorElement>) => {
         if (!ref.current || !btnRef.current) return;
@@ -12,7 +17,7 @@ export const MyButton = ({ className, text }: any) => {
         const y = e.clientY - rect.top;
         ref.current.style.left = `${x}px`;
         ref.current.style.top = `${y}px`;
-      };
+    };
 
     return (
         <a

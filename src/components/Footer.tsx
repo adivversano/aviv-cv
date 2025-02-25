@@ -1,6 +1,4 @@
-import { Button } from 'react-bootstrap';
 import { MyButton } from './MyButton';
-// import './Footer.scss';
 
 const Footer = () => {
     return (

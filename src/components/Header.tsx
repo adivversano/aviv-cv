@@ -1,30 +1,16 @@
 'use client';
 
 import Logo from '@/components/Logo';
-import IconHamburger from '@/icons/IconHamburger';
-import { motion, Variants } from 'framer-motion';
-import './Header.scss';
 import { MyButton } from '@/components/MyButton';
+import IconHamburger from '@/icons/IconHamburger';
+import { motion } from 'framer-motion';
+import './Header.scss';
 
 type HeaderProps = {
     isDark?: boolean
 }
 
-const floatVariants: Variants = {
-    rest: { y: 0 },
-    float: {
-        y: [0, -6, 0], // A subtle up/down movement
-        x: [-6, 0, -6],
-        transition: {
-            duration: 2,
-            // repeat: Infinity,
-            // repeatType: 'reverse',
-        },
-    },
-};
-
 const Header = ({ isDark = true }: HeaderProps) => {
-    // const isDark = useAppStore(state => state.header.isDark);
     return (
         <div className={`header-wrapper${isDark ? '' : ' white'}`}>
             <div className="header-container inner-container">
