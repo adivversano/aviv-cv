@@ -5,8 +5,8 @@ import path from "path";
 
 const nextConfig: NextConfig = {
   /* config options here */
-  // basePath: "/aviv-cv",
-  // assetPrefix: "/aviv-cv",
+  basePath: "/aviv-cv",
+  assetPrefix: "/aviv-cv",
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
