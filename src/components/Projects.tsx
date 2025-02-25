@@ -12,7 +12,7 @@ const projects = [
         date: '2024',
         field: 'משאבי האנוש',
         product: 'עיצוב ואפיון המערכת',
-        image: '/assets/project-mehula.png'
+        image: '/aviv-cv/assets/project-mehula.png'
     },
     {
         projectId: 2,
@@ -23,7 +23,7 @@ const projects = [
         date: '2024',
         field: 'פיתוח תוכנה',
         product: 'עיצוב לוגו ואתר רספונסיבי',
-        image: '/assets/project-diffreacting.png'
+        image: '/aviv-cv/assets/project-diffreacting.png'
     },
     {
         projectId: 3,
@@ -35,7 +35,7 @@ const projects = [
         date: '2024',
         field: 'איפור ואופנה',
         product: 'מיתוג ועיצוב לוגו',
-        image: '/assets/project-glamspot.png'
+        image: '/aviv-cv/assets/project-glamspot.png'
     },
     {
         projectId: 4,
@@ -47,7 +47,7 @@ const projects = [
         date: '2024',
         field: 'עולם הדיגיטל',
         product: 'עיצוב לוגו ואתר רספונסיבי',
-        image: '/assets/project-rize.png'
+        image: '/aviv-cv/assets/project-rize.png'
     },
     {
         projectId: 5,
@@ -57,7 +57,7 @@ const projects = [
         date: '2024',
         field: 'מכירת ציוד',
         product: 'איפיון ועיצוב אתר סחר',
-        image: '/assets/project-buyon.png'
+        image: '/aviv-cv/assets/project-buyon.png'
     },
     {
         projectId: 6,
@@ -68,7 +68,7 @@ const projects = [
         date: '2023',
         field: 'מסחר מוצר',
         product: 'עיצוב ואפיון מערכות חישוב',
-        image: '/assets/project-avery-dennison.png'
+        image: '/aviv-cv/assets/project-avery-dennison.png'
     }
 ]
 
