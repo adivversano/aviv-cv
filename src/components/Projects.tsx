@@ -101,7 +101,9 @@ const Projects = () => {
 
                                 <MyButton className="project-btn" text="לצפייה בפרויקט" />
                             </article>
-                            <Image className="project-graphic" src={image} fill alt="project graphic image"/>
+                            <div className='project-graphic'>
+                                <Image src={image} fill alt="project graphic image" />
+                            </div>
                         </div>
                     )
                 }
