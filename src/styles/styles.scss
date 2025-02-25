@@ -3,7 +3,19 @@
 
 //basic
 @import "./basic/variables.scss";
+@import "./basic/animations.scss";
 @import "./basic/layout.scss";
 @import "./basic/fonts.scss";
 @import "./basic/functions.scss";
 @import "./basic/base.scss";
+
+
+//components
+@import "@/components/Footer.scss";
+@import "@/components/Header.scss";
+@import "@/components/Hero.scss";
+@import "@/components/Logo.scss";
+@import "@/components/Project.scss";
+@import "@/components/Projects.scss";
+@import "@/components/Summary.scss";
+@import "@/components/MyButton.scss";

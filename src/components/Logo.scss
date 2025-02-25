@@ -1,12 +1,12 @@
 .logo-container {
-    &.white {
-        .logo-desktop,
-        .logo-mobile {
-            g > * {
-                fill: #0D1119;
-            }
-        }
-    }
+    // &.white {
+    //     .logo-desktop,
+    //     .logo-mobile {
+    //         g > * {
+    //             fill: $text-color;
+    //         }
+    //     }
+    // }
 
     .logo-desktop {
         display: none;

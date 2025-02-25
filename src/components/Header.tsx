@@ -1,46 +1,51 @@
 'use client';
 
 import Logo from '@/components/Logo';
-import { IconDownload } from '@/icons/IconDownload';
 import IconHamburger from '@/icons/IconHamburger';
-import Link from 'next/link';
-import { Button } from 'react-bootstrap';
+import { motion, Variants } from 'framer-motion';
 import './Header.scss';
+import { MyButton } from '@/components/MyButton';
 
 type HeaderProps = {
     isDark?: boolean
 }
+
+const floatVariants: Variants = {
+    rest: { y: 0 },
+    float: {
+        y: [0, -6, 0], // A subtle up/down movement
+        x: [-6, 0, -6],
+        transition: {
+            duration: 2,
+            // repeat: Infinity,
+            // repeatType: 'reverse',
+        },
+    },
+};
 
 const Header = ({ isDark = true }: HeaderProps) => {
     // const isDark = useAppStore(state => state.header.isDark);
     return (
         <div className={`header-wrapper${isDark ? '' : ' white'}`}>
             <div className="header-container inner-container">
-                <Logo isDark={isDark}/>
+                <Logo isDark={isDark} />
 
                 <nav>
                     <ul className="navbar">
-                        <li className="projects-btn">עבודות</li>
+                        <li className="projects-btn">פרויקטים</li>
                         <li className="download-cv-btn">
                             <span className="cv">
                                 קורות חיים
                             </span>
-                            <IconDownload />
+                            {/* <IconDownload /> */}
                         </li>
                         <li>
-                            <Link
-                                className={`contact-btn btn${isDark ? '' : ' white'}`}
-                                href="/project/111"
-                                data-text="← דברו איתי"
-                            >
-                                דברו איתי
-                                <span className='arrow'>←</span>
-                            </Link>
+                            <MyButton className={`contact-btn ${isDark ? '' : ' white'}`} text="דברו איתי" />
                         </li>
                         <li className="hamburger-btn-container">
-                            <Button className="hamburger-btn" variant="" bsPrefix='reset-btn'>
+                            <motion.button className="hamburger-btn reset-btn">
                                 <IconHamburger />
-                            </Button>
+                            </motion.button>
                         </li>
                     </ul>
                 </nav>

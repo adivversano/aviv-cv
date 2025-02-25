@@ -1,5 +1,5 @@
 .summary-wrapper {
-    background-color: #d9e5ff;
+    background-color: #141414;
     width: 100%;
     position: relative;
 
@@ -9,36 +9,81 @@
     overflow: hidden;
 
     @media screen and (min-width: 1370px) {
-        overflow: unset;
         flex-direction: column;
         height: 100vh;
     }
 
-    .hand-vector {
-        background-image: url("/aviv-cv/assets/hand-vector.svg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
+    .summary-vector {
+        // background-image: url("/assets/hand-vector.svg");
+        // background-repeat: no-repeat;
+        // background-size: cover;
+        // background-position: center;
         aspect-ratio: 724 / 641;
         margin-right: -10px;
         height: 433px;
+        position: relative;
+
+        .bg,
+        .hand {
+            width: 100%;
+        }
+        .bg {
+            position: absolute;
+            // z-index: 1;
+            bottom: 0;
+        }
+        .hand {
+            max-height: 292px;
+            height: 100%;
+            z-index: 1;
+            position: absolute;
+            bottom: 0;
+        }
+
+        @media screen and (min-width: 450px) {
+            .hand {
+                max-height: unset;
+            }
+        }
 
         @media screen and (min-width: 840px) {
             width: 632px;
             align-self: end;
+            .hand {
+                max-height: 532px;
+            }
+            .bg {
+                width: auto;
+                max-height: 366px;
+                height: 100%;
+                bottom: 0;
+                position: absolute;
+            }
         }
-        
+
         @media screen and (min-width: 1370px) {
-            align-self: unset;
-            background-size: contain;
-            background-position: 0%, 10%;
-            height: 641px;
-            width: unset;
+            // align-self: unset;
+            // background-size: contain;
+            // background-position: 0%, 10%;
+            // height: 641px;
+            // width: unset;
+            // // position: absolute;
+            // left: 0;
+            // bottom: 0;
+            // top: 0;
+            // margin: auto;
+            display: flex;
+            justify-content: center;
             position: absolute;
-            left: 0;
-            bottom: 0;
-            top: 0;
-            margin: auto;
+            .bg,
+            .hand {
+                position: absolute;
+                align-self: end;
+            }
+            .hand {
+                height: unset;
+                z-index: 1;
+            }
         }
     }
 
@@ -58,23 +103,34 @@
             @media screen and (min-width: 1510px) {
                 font-size: 96px;
             }
-            color: #0d1119;
+            color: $text-color;
         }
         .description {
             font-size: 18px;
             max-width: 591px;
-            color: #0d1119;
+            color: $text-color;
             opacity: 0.7;
-            line-height: 1.5;
+            line-height: 1;
             @media screen and (min-width: 840px) {
                 font-size: 22px;
             }
             @media screen and (min-width: 1510px) {
                 font-size: 24px;
             }
-            > span {
-                display: inline-block;
-                margin-top: 40px;
+            .d-flex {
+                display: flex;
+            }
+            .flex-column {
+                flex-direction: column;
+            }
+            span {
+                &.block {
+                    display: block;
+                }
+                &.inline-block {
+                    display: inline-block;
+                }
+                // margin-top: 40px;
             }
         }
     }

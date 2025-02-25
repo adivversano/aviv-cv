@@ -1,24 +1,135 @@
+import { motion, useScroll, useTransform, Variants } from 'framer-motion';
 import './Hero.scss';
+import { useEffect } from 'react';
 
-const Hero = () => {
-    return (
-        <>
-            <div className="hero inner-container">
-                <h2 className="my-name">אביב אבידר</h2>
-                <h1 className="sub-title">
-                    {/* <div className="text first-text">מעצב</div> */}
-                    <span className="text">מעצב</span>
-                    <span className="text">חווית</span>
-                    <span className="text">משתמש</span>
-                    <div className="cloud-vector" />
-                    <div className="aviv-cartoon" />
-                    <div className="doggo" />
-                    <a className="arrow-vector" href="#summary" />
-                </h1>
-            </div>
-            <div className="bg-curve-vector" />
-        </>
-    )
+const containerVariants: Variants = {
+    hidden: {},
+    show: {
+        transition: {
+            /* Stagger each child by 0.2s */
+            staggerChildren: 0.05,
+            ease: 'easeOut'
+        },
+    },
+};
+
+const textVariants: Variants = {
+    hidden: { y: -50, opacity: 0 },
+    show: {
+        y: 0,
+        opacity: 1,
+        transition: {
+            type: 'spring',
+            stiffness: 80,
+            damping: 20,
+        },
+    },
+};
+
+const imageVariants: Variants = {
+    hidden: { y: 50, opacity: 0 },
+    show: {
+        y: 0,
+        opacity: 1,
+        transition: {
+            // duration: 0.3,
+            // ease: 'easeOut',
+            type: 'spring',
+            stiffness: 80,
+            damping: 20,
+        },
+    },
+};
+
+const dogVariants: Variants = {
+    hidden: { scale: 0, opacity: 0 },
+    show: {
+        scale: 1,
+        opacity: 1,
+        transition: {
+            duration: 0.2,
+            ease: 'easeOut'
+        }
+    }
+
 }
 
-export default Hero
+const curveVariants: Variants = {
+    hidden: { opacity: 0 },
+    show: {
+        opacity: 1,
+        transition: {
+            type: 'spring',
+            stiffness: 80,
+            damping: 20,
+        },
+    },
+};;
+
+const Hero = () => {
+    const { scrollY } = useScroll();
+    const y = useTransform(scrollY, [0, 500], [0, -200]); // Moves up as you scroll
+    return (
+        <>
+            {/* 
+          The outer <motion.div> uses containerVariants 
+          to stagger the animation of its child elements 
+        */}
+            <motion.div
+                className="hero inner-container"
+                variants={containerVariants}
+                initial="hidden"
+                animate="show"
+            >
+                {/* Animated Name */}
+                <motion.div
+                    className="hero-container"
+                    variants={containerVariants}
+                    initial="hidden"
+                    animate="show"
+                >
+                    <motion.div className="cloud-vector" variants={dogVariants} />
+
+                    <motion.h2 className="my-name" variants={textVariants}>
+                        אביב אבידר
+                    </motion.h2>
+
+                    {/* Animated Subtitle */}
+                    <motion.h1 className="sub-title">
+                        {/* Each <span> is a child that gets staggered */}
+                        <motion.span className="text" variants={textVariants}>
+                            מעצב
+                        </motion.span>
+                        <motion.span className="text" variants={textVariants}>
+                            חווית
+                        </motion.span>
+                        <motion.span className="text" variants={textVariants}>
+                            משתמש
+                        </motion.span>
+
+
+                    </motion.h1>
+                    {/* Animated Vectors */}
+
+
+                    <motion.div
+                        className="aviv-cartoon"
+                        variants={imageVariants}
+                    />
+
+                    <motion.div
+                        className="doggo"
+                        variants={dogVariants}
+                    />
+
+                    {/* Arrow slides in and fades up */}
+                    <motion.a className="arrow-vector" href="#summary" variants={textVariants} />
+                </motion.div>
+            </motion.div>
+
+            <div className="bg-curve-vector" />
+        </>
+    );
+};
+
+export default Hero;

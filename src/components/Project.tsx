@@ -1,5 +1,4 @@
 import { ReactNode } from 'react';
-import './Project.scss';
 
 type ProjectProps = {
     project: {

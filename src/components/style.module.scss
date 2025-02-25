@@ -1,0 +1,28 @@
+.paragraph{
+  display: flex;
+  font-size: 18px;
+  font-size: 18px;
+  max-width: 591px;
+  // color: $text-color;
+  line-height: 1;
+  @media screen and (min-width: 840px) {
+      font-size: 22px;
+  }
+  @media screen and (min-width: 1510px) {
+      font-size: 24px;
+  }
+  line-height: 1;
+  color: white;
+  flex-wrap: wrap;
+  .word{
+    position: relative;
+    margin-right: 12px;
+    margin-top: 12px;
+    unicode-bidi: plaintext;
+    .shadow{
+      position: absolute;
+      opacity: 20%;
+    }
+  }
+  
+}

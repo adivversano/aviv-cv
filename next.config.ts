@@ -5,8 +5,15 @@ import path from "path";
 
 const nextConfig: NextConfig = {
   /* config options here */
-  basePath: "/aviv-cv",
-  assetPrefix: "/aviv-cv",
+  // basePath: "/aviv-cv",
+  // assetPrefix: "/aviv-cv",
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ["@svgr/webpack"],
+    });
+    return config;
+  },
   output: 'export',
   reactStrictMode: false,
   // distDir: 'dist',
@@ -16,6 +23,7 @@ const nextConfig: NextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
+
 };
 
 export default nextConfig;

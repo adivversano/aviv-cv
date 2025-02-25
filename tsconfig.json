@@ -22,19 +22,25 @@
         "name": "next"
       }
     ],
-    "baseUrl": "src/",
+    "baseUrl": ".",
     "paths": {
       "@/components/*": [
-        "components/*"
+        "src/components/*"
       ],
       "@/styles/*": [
-        "styles/*"
+        "src/styles/*"
       ],
       "@/icons/*": [
-        "icons/*"
+        "src/icons/*"
       ],
       "@/store/*": [
-        "store/*"
+        "src/store/*"
+      ],
+      "@/utils/*": [
+        "src/utils/*"
+      ],
+      "@/*": [
+        "public/*"
       ]
     }
   },

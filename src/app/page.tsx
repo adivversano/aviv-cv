@@ -7,8 +7,23 @@ import Summary from "@/components/Summary";
 import { useAppStore } from "@/store/store";
 import { useEffect } from "react";
 import styles from './page.module.scss';
+import { motion, Variants } from 'framer-motion';
+import useScrollWithOffset from "src/hooks/useScrollWithOffset";
+
+const containerVariants: Variants = {
+  hidden: {},
+  show: {
+    transition: {
+      /* Stagger each child by 0.2s */
+      staggerChildren: 0.05,
+      ease: 'easeOut'
+    },
+  },
+};
+
 
 export default function Home() {
+  useScrollWithOffset();
   const isDark = useAppStore(state => state.header.isDark);
   const setIsDark = useAppStore(state => state.setIsDark);
 
@@ -19,12 +34,17 @@ export default function Home() {
   }, [])
 
   return (
-    <div className={styles.home}>
+    <motion.div
+      className={styles.home}
+      variants={containerVariants}
+      initial="hidden"
+      animate="show"
+    >
       <Header />
       <Hero />
       <Summary />
       <Projects />
       <Footer />
-    </div>
+    </motion.div>
   );
 }

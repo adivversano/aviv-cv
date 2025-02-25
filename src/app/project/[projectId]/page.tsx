@@ -38,9 +38,6 @@ const project = {
 
 const ProjectPage = async ({ params }: ProjectPageProps) => {
     const param = await params;
-    console.log(param)
-
-
     return (
         <div className={styles['project-container']}>
             <Project project={project} />

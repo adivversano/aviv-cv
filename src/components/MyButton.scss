@@ -1,0 +1,42 @@
+.btn-container {
+    position: relative;
+    // background-color: white;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    .label {
+        position: relative;
+        font-family: sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        transition: color 0.3s ease-out;
+        z-index: 1;
+    }
+
+    .bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 225%;
+        min-height: 225%;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background-color: #2a60ff;
+        transform: translate(-50%, -50%) scale(0);
+        transition: transform 0.5s ease-out;
+    }
+    .arrow {
+        font-size: 15px;
+        margin-right: 7px;
+    }
+}
+
+/* hover styles */
+.btn-container:hover .label {
+    color: white;
+}
+
+.btn-container:hover .bg {
+    transform: translate(-50%, -50%) scale(1);
+    border-color: #2a60ff;
+}

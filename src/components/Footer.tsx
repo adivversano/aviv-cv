@@ -1,26 +1,26 @@
 import { Button } from 'react-bootstrap';
-import './Footer.scss';
+import { MyButton } from './MyButton';
+// import './Footer.scss';
 
 const Footer = () => {
     return (
-        <div className="footer-wrapper">
-            <div className="footer inner-container">
-            <div className="right-container">
+        <div className="footer inner-container">
+            <div className="footer-content">
+                <div className="right-container">
                     <h2 className="title">
-                        שיהיה אחלה של יום
+                        זה רק קצה הקרחון.
                     </h2>
 
-                    <h3 className="sub-title">אשמח אם נעבוד ביחד</h3>
-
-                    <Button className="project-btn lg" variant="">
-                        <span className="text bold">אני עניינתי אותך?</span>
-                        <span className="text">יש לי עוד קצת ביכולות ←</span>
-                    </Button>
+                    <h3 className="sub-title">רוצה לראות מה עוד אפשר לעשות?</h3>
                 </div>
 
                 <div className="left-container">
-                    <div className="footer-vector" />
+                    <MyButton className="footer-btn" text="דברו איתי" />
                 </div>
+            </div>
+            <div className="credits-container">
+                <small>כל הזכויות שמורות לאביב אבידר</small>
+                <small>פיתוח ע״י אדיב ורסנו</small>
             </div>
         </div>
     )

@@ -1,14 +1,12 @@
-.main-container {
-}
-
 .inner-container {
     width: 100%;
-    max-width: 1520px;
+    max-width: 1575px;
     padding-inline: 15px;
 }
 
-@media screen and (min-width: 1520px) {
+@media screen and (min-width: 1605px) {
     .inner-container {
+        padding-inline: unset;
         margin: auto;
     }
 }

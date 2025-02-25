@@ -3,26 +3,132 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    // padding-top: 370px;
-    // padding-bottom: 268px;
-    height: calc(100vh - 100px - 102px) ;
+    padding-top: 250px;
+    padding-bottom: 268px;
+    // height: calc(90vh - 116px);
     overflow: hidden;
+    .hero-container {
+        position: relative;
+        .cloud-vector {
+            background-image: url("/assets/hero-vector.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: 0%, 10%;
+            z-index: -1;
+            position: absolute;
+            aspect-ratio: 526/436;
+            transform: scaleX(-1);
+            right: -15%;
+            bottom: -42%;
+            // right: -9%;
+            // bottom: -42%;
+            height: 401px;
+            z-index: 1;
 
-    @media screen and (min-width: 840px) {
-        padding-top: 125px;
-        padding-bottom: 330px;
+            @media screen and (min-width: 840px) {
+                transform: unset;
+                // right: -37%;
+                // bottom: -73%;
+                // transform: unset;
+                // right: -18%;
+                // bottom: -15%;
+                height: 344px;
+            }
+            @media screen and (min-width: 1575px) {
+                height: 388px;
+            }
+        }
+        .aviv-cartoon {
+            background-image: url("/assets/aviv-cartoon.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: 0%, 10%;
+            z-index: 1;
+            position: absolute;
+            height: 200px;
+            top: -134%;
+            left: 0;
+            right: 0;
+            margin: auto;
+            aspect-ratio: 1/1;
+
+            @media screen and (min-width: 840px) {
+                top: unset;
+                right: -8%;
+                bottom: 52%;
+                // height: 215px;
+                height: 300px;
+                margin: unset;
+                left: unset;
+            }
+
+            @media screen and (min-width: 1575px) {
+                height: 359px;
+            }
+        }
+        .doggo {
+            background-image: url("/assets/hero-doggo.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: 0%, 10%;
+            height: 82px;
+            position: absolute;
+            right: 0;
+            bottom: 79%;
+            aspect-ratio: 130/133;
+            transform: rotate(7deg);
+            z-index: 2;
+
+            @media screen and (min-width: 840px) {
+                transform: unset;
+                right: unset;
+                left: -2.7%;
+                bottom: 29%;
+                height: 133px;
+            }
+
+            @media screen and (min-width: 1575px) {
+                right: unset;
+                left: -28.7%;
+                bottom: 33%;
+                height: 180px;
+            }
+        }
+        .arrow-vector {
+            background-image: url("/assets/hero-vector2.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: 0%, 10%;
+            height: 44px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            aspect-ratio: 1/1;
+            bottom: -125%;
+
+            @media screen and (min-width: 840px) {
+                bottom: -30px;
+                height: 32px;
+                pointer-events: none;
+            }
+
+            @media screen and (min-width: 1575px) {
+                bottom: -65px;
+                height: 48px;
+            }
+        }
     }
-
     .my-name {
         opacity: 0.8;
         font-size: 38px;
-        z-index: 2;
+        z-index: 10;
+        position: relative;
+        text-align: center;
 
         @media screen and (min-width: 840px) {
-            font-size: 66px;
-        }
-        @media screen and (min-width: 1575px) {
-            font-size: 96px;
+            font-size: 40px;
+            margin-bottom: 10px;
         }
     }
     .sub-title {
@@ -38,15 +144,11 @@
 
         @media screen and (min-width: 840px) {
             max-width: 740px;
-            font-size: 120px;
+            font-size: 104px;
         }
 
-        @media screen and (min-width: 1575px) {
-            font-size: 170px;
-            max-width: 1025px;
-        }
         .text {
-            line-height: 0.85;
+            line-height: 0.95;
             z-index: 2;
             &:first-child {
                 display: block;
@@ -74,116 +176,16 @@
             @media screen and (min-width: 1575px) {
             }
         }
-        .cloud-vector {
-            background-image: url("/aviv-cv/assets/hero-vector.svg");
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: 0%, 10%;
-            z-index: -1;
-            position: absolute;
-            aspect-ratio: 415/313;
-            transform: scaleX(-1);
-            right: -15%;
-            bottom: -42%;
-            // right: -9%;
-            // bottom: -42%;
-            height: 401px;
-            z-index: 1;
 
-            @media screen and (min-width: 840px) {
-                transform: unset;
-                right: -18%;
-                bottom: -15%;
-                height: 240px;
-            }
-            @media screen and (min-width: 1575px) {
-                height: 313px;
-            }
-        }
-        .aviv-cartoon {
-            background-image: url("/aviv-cv/assets/aviv-cartoon.svg");
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: 0%, 10%;
-            z-index: 1;
-            position: absolute;
-            height: 200px;
-            // top: -181%;
-            top: -207%;
-            aspect-ratio: 1/1;
-
-            @media screen and (min-width: 840px) {
-                top: unset;
-                right: -4%;
-                bottom: 33%;
-                height: 215px;
-            }
-
-            @media screen and (min-width: 1575px) {
-                height: 285px;
-            }
-        }
-        .doggo {
-            background-image: url("/aviv-cv/assets/hero-doggo.svg");
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: 0%, 10%;
-            height: 82px;
-            position: absolute;
-            right: 0;
-            bottom: 79%;
-            aspect-ratio: 130/133;
-            transform: rotate(7deg);
-            z-index: 2;
-
-            @media screen and (min-width: 840px) {
-                transform: unset;
-                right: unset;
-                left: -2.7%;
-                bottom: 29%;
-                height: 100px;
-            }
-
-            @media screen and (min-width: 1575px) {
-                right: unset;
-                left: -2.7%;
-                bottom: 29%;
-                height: 133px;
-            }
-        }
-        .arrow-vector {
-            background-image: url("/aviv-cv/assets/hero-vector2.svg");
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: 0%, 10%;
-            height: 44px;
-            position: absolute;
-            left: 0;
-            right: 0;
-            margin: auto;
-            aspect-ratio: 1/1;
-            bottom: -125%;
-
-            @media screen and (min-width: 840px) {
-                bottom: -20px;
-                height: 32px;
-                pointer-events: none;
-            }
-
-            @media screen and (min-width: 1575px) {
-                bottom: -30px;
-                height: 48px;
-            }
-        }
     }
 }
 
 .bg-curve-vector {
-    background-image: url("/aviv-cv/assets/summary-bg.svg");
+    background-image: url("/assets/summary-bg.svg");
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #0d1119;
+    background-color: black;
     width: 100%;
     height: 145px;
     overflow: hidden;
