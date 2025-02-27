@@ -54,11 +54,11 @@
                         z-index: 1;
                         position: relative;
                     }
-                    .project-content {
-                        padding-inline: 15px;
-                        z-index: 1;
-                        position: relative;
-                    }
+                }
+                .project-content {
+                    padding-inline: 15px;
+                    z-index: 1;
+                    position: relative;
                 }
                 @media screen and (min-width: 1140px) {
                     &::before {
