@@ -6,17 +6,17 @@ type MyButtonProps = {
 }
 
 export const MyButton = ({ className, text }: MyButtonProps) => {
-    const ref = useRef<HTMLSpanElement>(null);
+    const circleRef = useRef<HTMLSpanElement>(null);
     const btnRef = useRef<HTMLAnchorElement>(null)
 
     const handleOrigin = (e: React.MouseEvent<HTMLAnchorElement>) => {
-        if (!ref.current || !btnRef.current) return;
+        if (!circleRef.current || !btnRef.current) return;
         const rect = btnRef.current.getBoundingClientRect();
         // Calculate pointer position relative to the button
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
-        ref.current.style.left = `${x}px`;
-        ref.current.style.top = `${y}px`;
+        circleRef.current.style.left = `${x}px`;
+        circleRef.current.style.top = `${y}px`;
     };
 
     return (
@@ -30,7 +30,7 @@ export const MyButton = ({ className, text }: MyButtonProps) => {
                 {text}
                 <span className='arrow'>←</span>
             </span>
-            <span className="bg" ref={ref}></span>
+            <span className="bg" ref={circleRef}></span>
         </a>
     )
 }
