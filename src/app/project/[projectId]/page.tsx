@@ -1,6 +1,5 @@
 import Project from "@/components/Project";
 import styles from './page.module.scss';
-import { useParams } from "next/navigation";
 
 
 async function fetchProjectData(projectId: string) {
@@ -39,13 +38,13 @@ async function fetchProjectData(projectId: string) {
                 ],
             },
             {
-                title: 'על הפרויקט',
+                title: 'התפקיד שלי בפרויקט',
                 description: <p>
                     התפקיד שלי היה לאפיין ולעצב את ממשק המשתמש (UI) למערכת. כיוון שהמערכת
                     <br />מיועדת <strong>לדסקטופ בלבד</strong>, ערכתי מחקר מעמיק על מערכות ניהול מובילות בשוק,
                     <br />זיהיתי את נקודות החוזק שלהן ושילבתי את המסקנות במערכת שעבדתי עליה.
                     <br />המחקר הזה אפשר לי לצמצם מסכים ולבנות ממשק חכם ויעיל יותר.
-                    <br />בנוסף, עבדתי בשיתוף פעולה הדוק עם מנכ"ל החברה, שהיה גם המפתח הראשי.
+                    <br />בנוסף, עבדתי בשיתוף פעולה הדוק עם מנכ&quot;ל החברה, שהיה גם המפתח הראשי.
                     <br />העבודה המשותפת הזו אפשרה לנו לוודא <strong>שהאפיון מדויק ומותאם</strong> הן לצרכים הטכניים
                     <br />והן לצרכים התפעוליים של הלקוחות.
                 </p>,
@@ -62,17 +61,19 @@ async function fetchProjectData(projectId: string) {
     return projects.find(p => p.projectId === projectId);
 }
 
+type PageProps = {
+    params: Promise<{ projectId: string }>
+}
+
 export async function generateMetadata({
-    params,
-}: {
-    params: { projectId: string };
-}) {
+    params
+}: PageProps) {
     // Fetch project data from your server based on projectId
     // const res = await fetch(`https://example.com/api/projects/${params.projectId}`, {
     //   cache: 'no-store',
     // });
     // const data = await res.json();
-    const projectId = await params.projectId;
+    const projectId = (await params).projectId;
     const project = await fetchProjectData(projectId);
     if (!project) return null;
 
@@ -85,11 +86,10 @@ export async function generateMetadata({
 }
 
 async function ProjectPage({
-    params,
-}: {
-    params: { projectId: string };
-}) {
-    const project = await fetchProjectData(params.projectId);
+    params
+}: PageProps) {
+    const projectId = (await params).projectId;
+    const project = await fetchProjectData(projectId);
 
     if (!project) return <div>Project not found</div>
 
