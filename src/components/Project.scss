@@ -1,31 +1,86 @@
 .project {
     display: flex;
     flex-direction: column;
-    // max-width: 793px;
     margin: auto;
     text-align: right;
+    .sections {
+        .section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &:not(:last-child) {
+                margin-bottom: 125px;
+            }
+            .section-content {
+                margin-bottom: 60px;
+                .title {
+                    font-size: 60px;
+                    margin-bottom: 40px;
+                    font-weight: 700;
+                    color: $text-color;
+                }
 
-    .title {
-        font-size: 60px;
-        margin-bottom: 40px;
-        font-weight: 700;
-        color: $text-color;
-    }
+                .description {
+                    font-size: 24px;
+                    font-weight: 400;
+                    color: #757d8e;
 
-    .description {
-        font-size: 24px;
-        font-weight: 400;
-        color: #757d8e;
+                    > p {
+                        line-height: 1.1;
 
-        > p {
-            line-height: 1.8;
-            // >span {
-            //     padding: 0 5px;
-            // }
-            > strong {
-                color: $text-color;
-                font-weight: 700;
+                        > strong {
+                            color: $text-color;
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+
+            .gallery {
+                display: grid;
+                grid-template-columns: 1fr; // Mobile: one column
+                gap: 1rem;
+                width: 100%;
+                margin: 0 auto;
+
+                // All direct children (each image container)
+                > * {
+                    position: relative;
+                    width: 100%;
+                    overflow: hidden;
+                    background-color: $bg-color-2;
+                    border-radius: 30px;
+                }
+
+                // First image: big image
+                > *:first-child {
+                    aspect-ratio: 1578 / 1000;
+                }
+
+                // All other images: small images
+                > *:not(:first-child) {
+                    aspect-ratio: 774 / 437;
+                }
+
+                // Next.js Image with fill should use object-fit
+                .image {
+                    object-fit: cover;
+                }
+
+                @media (min-width: 992px) {
+                    grid-template-columns: repeat(2, 1fr); // Two columns on larger screens
+
+                    // Make the first image span both columns (full width)
+                    > *:first-child {
+                        grid-column: 1 / -1;
+                    }
+                }
             }
         }
+    }
+    .projects-btn-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 60px;
     }
 }

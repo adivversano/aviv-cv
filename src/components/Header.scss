@@ -1,5 +1,5 @@
 .header-wrapper {
-    background-color: #141414;
+    background-color: $bg-color-2;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -41,11 +41,18 @@
                 font-weight: 500;
                 font-size: 18px;
                 > li {
+                    color: $text-color;
                     align-self: center;
 
                     &.projects-btn,
                     &.download-cv-btn {
                         display: none;
+                        color: inherit;
+                    }
+                    &.download-cv-btn {
+                        .cv {
+                            color: inherit;
+                        }
                     }
                     .contact-btn {
                         // padding: 6px 19px;

@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { MyButton } from './MyButton';
+import Link from 'next/link';
 
 const projects = [
     {
@@ -85,7 +86,7 @@ const Projects = () => {
     return (
         <div className="projects-wrapper">
             <div className="projects">
-                {projects.map(({ title, description, date, field, product, imgUrl }, index) => {
+                {projects.map(({ projectId, title, description, date, field, product, imgUrl }, index) => {
                     return (
                         <div className="project" key={index}>
                             <article className="project-content">
@@ -99,7 +100,7 @@ const Projects = () => {
                                     <span>תוצר: {product}</span>
                                 </p>
 
-                                <MyButton className="project-btn" text="לצפייה בפרויקט" />
+                                <MyButton className="project-btn" text="לצפייה בפרויקט" as={Link} href={`/project/${projectId}`}/>
                             </article>
                             <div className="project-graphic-container">
                                 <Image className='project-graphic'

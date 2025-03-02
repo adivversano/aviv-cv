@@ -143,6 +143,11 @@ input {
     border: none;
 }
 
+.reset-link {
+    color: unset;
+    text-decoration: none;
+}
+
 .primary {
     color: $text-color;
 }
