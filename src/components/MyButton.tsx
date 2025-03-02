@@ -20,7 +20,7 @@ import React, {
     const Component = as || 'a';
     const circleRef = useRef<HTMLSpanElement>(null);
     // Use HTMLElement for a generic element ref.
-    const btnRef = useRef<HTMLElement>(null);
+    const btnRef = useRef<HTMLAnchorElement>(null);
   
     const handleOrigin = (e: React.MouseEvent<HTMLElement>) => {
       if (!circleRef.current || !btnRef.current) return;
@@ -33,7 +33,7 @@ import React, {
   
     return (
       <Component
-        ref={btnRef as any}
+        ref={btnRef}
         className={`btn btn-container ${className}`}
         onMouseEnter={handleOrigin}
         onMouseLeave={handleOrigin}
