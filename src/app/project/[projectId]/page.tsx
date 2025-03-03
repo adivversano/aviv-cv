@@ -65,6 +65,16 @@ type PageProps = {
     params: Promise<{ projectId: string }>
 }
 
+export async function generateStaticParams() {
+    // Fetch project IDs from your server
+    // const res = await fetch('https://example.com/api/projects', {
+    //   cache: 'no-store',
+    // });
+    // const data = await res.json();
+    // return data.map((projectId) => ({ params: { projectId } }));
+    return [{ projectId: '1' }];
+}
+
 export async function generateMetadata({
     params
 }: PageProps) {

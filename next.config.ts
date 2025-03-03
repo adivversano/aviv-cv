@@ -14,7 +14,7 @@ const nextConfig: NextConfig = {
     });
     return config;
   },
-  // output: 'export',
+  output: 'export',
   reactStrictMode: false,
   // distDir: 'dist',
   images: {
