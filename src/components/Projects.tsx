@@ -17,14 +17,14 @@ const projects = [
     },
     {
         projectId: 2,
-        title: 'Diffreacting',
+        title: 'Differeacting',
         description: `מיתוג עבוד חברת Differeacting. העוסקת בפיתוח תוכנה של
         מערכות האתגר היה ליצור אייקון שיהיה מודרני וחדשני שישלב בין שני
         אותיות לפי בקשת הלקוח`,
         date: '2024',
         field: 'פיתוח תוכנה',
         product: 'עיצוב לוגו ואתר רספונסיבי',
-        imgUrl: '/aviv-cv/assets/project-diffreacting.png'
+        imgUrl: '/assets/project-differeacting.png'
     },
     {
         projectId: 3,

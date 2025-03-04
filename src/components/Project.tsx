@@ -7,6 +7,10 @@ type ProjectSection = {
     title: string
     description: ReactNode
     imgUrls: string[]
+    imgOptions?: {
+        layout?: string
+        image?: string
+    }
 }
 
 type ProjectProps = {
@@ -23,17 +27,17 @@ const Project = ({ project }: ProjectProps) => {
         <div className="project">
             <div className="sections">
                 {sections.map(
-                    ({ title, description, imgUrls }, index) => {
+                    ({ title, description, imgUrls, imgOptions }, index) => {
                         return (
                             <div className="section" key={index}>
                                 <div className="section-content">
-                                    <h2 className="title">{title}</h2>
+                                    <h2 className="title" dangerouslySetInnerHTML={{__html: title.replace('\n', '<br/>')}}></h2>
                                     <div className="description">{description}</div>
                                 </div>
-                                <div className="gallery">
+                                <div className={`gallery ${imgOptions?.layout ?? ''}`}>
                                     {imgUrls.map((url, index) => (
                                         <div className="img-container" key={index}>
-                                            <Image className="image" key={index} src={url} fill alt="" />
+                                            <Image className={`image ${imgOptions?.image ?? ''}`} key={index} src={url} fill alt="" />
                                         </div>
                                     ))}
                                 </div>

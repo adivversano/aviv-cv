@@ -50,25 +50,73 @@
                     overflow: hidden;
                     background-color: $bg-color-2;
                     border-radius: 30px;
+                    aspect-ratio: 361 / 264;
                 }
 
-                // First image: big image
-                > *:first-child {
-                    aspect-ratio: 1578 / 1000;
+                &.no-bg {
+                    > * {
+                        background-color: unset;
+                    }
                 }
 
-                // All other images: small images
-                > *:not(:first-child) {
-                    aspect-ratio: 774 / 437;
+                .image {
+                    pointer-events: none;
+                    object-fit: contain;
+                    &.cover {
+                        object-fit: cover;
+                    }
                 }
+
+                // &.column3 {
+                //     // First image: big image
+                //     > *:first-child {
+                //         aspect-ratio: 1578 / 1000;
+                //     }
+
+                //     // All other images: small images
+                //     > *:not(:first-child) {
+                //         aspect-ratio: 506 / 450;
+                //     }
+                // }
+
+                // // First image: big image
+                // > *:first-child {
+                //     aspect-ratio: 1578 / 1000;
+                // }
+
+                // // All other images: small images
+                // > *:not(:first-child) {
+                //     aspect-ratio: 774 / 437;
+                // }
 
                 // Next.js Image with fill should use object-fit
-                .image {
-                    object-fit: cover;
-                }
 
                 @media (min-width: 992px) {
                     grid-template-columns: repeat(2, 1fr); // Two columns on larger screens
+
+                    // First image: big image
+                    > *:first-child {
+                        aspect-ratio: 1578 / 1000;
+                    }
+
+                    // All other images: small images
+                    > *:not(:first-child) {
+                        aspect-ratio: 774 / 437;
+                    }
+
+                    &.column3 {
+                        grid-template-columns: repeat(3, 1fr); // Three columns on even larger screens
+
+                        // First image: big image
+                        > *:first-child {
+                            aspect-ratio: 1578 / 1000;
+                        }
+
+                        // All other images: small images
+                        > *:not(:first-child) {
+                            aspect-ratio: 506 / 450;
+                        }
+                    }
 
                     // Make the first image span both columns (full width)
                     > *:first-child {
