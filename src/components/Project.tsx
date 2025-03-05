@@ -1,7 +1,6 @@
-import Image from 'next/image';
-import { ReactNode } from 'react';
 import { MyButton } from '@/components/MyButton';
 import Link from 'next/link';
+import { ReactNode } from 'react';
 import ResponsiveSlider from './ResponsiveSlider';
 
 type ProjectSection = {

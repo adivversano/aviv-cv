@@ -1,14 +1,14 @@
 'use client';
-import { useEffect, useState } from 'react';
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
+import NextIcon from '@/assets/next-icon.svg';
+import PrevIcon from '@/assets/prev-icon.svg';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { Navigation, Pagination, Scrollbar } from 'swiper/modules';
-import PrevIcon from '@/assets/prev-icon.svg';
-import NextIcon from '@/assets/next-icon.svg';
+import { Navigation, Scrollbar } from 'swiper/modules';
 
 type ResponsiveSliderProps = {
   imgUrls: string[];
