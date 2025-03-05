@@ -1,0 +1,37 @@
+.swiper {
+    .swiper-scrollbar {
+        height: 3px;
+        background-color: $bg-color-2;
+        width: 100%;
+        margin-block: 40px;
+        .swiper-scrollbar-drag {
+            background-color: #a1a1a1;
+            height: 3px;
+            cursor: grab;
+            &:active {
+                cursor: grabbing;
+            }
+        }
+    }
+    .swiper-slide {
+        cursor: grab;
+        &:active {
+            cursor: grabbing;
+        }
+    }
+    .navigation {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 9px;
+        .next-btn,
+        .prev-btn {
+            position: unset;
+            margin: unset;
+            width: clamp(32px, 64px, 64px);
+            height: clamp(32px, 64px, 64px);
+            border: 1px solid $bg-color-2;
+            border-radius: 50%;
+        }
+    }
+}
