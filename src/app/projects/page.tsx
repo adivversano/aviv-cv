@@ -7,37 +7,37 @@ const projects = [
         projectId: 2,
         title: 'Differeacting',
         product: 'עיצוב לוגו ואתר רספונסיבי',
-        imgUrl: '/assets/project-differeacting.png'
+        imgUrl: '/aviv-cv/assets/project-differeacting.png'
     },
     {
         projectId: 1,
         title: 'קבוצת מכולה',
         product: 'עיצוב ואפיון המערכת',
-        imgUrl: '/assets/project-mehula.png'
+        imgUrl: '/aviv-cv/assets/project-mehula.png'
     },
     {
         projectId: 4,
         title: 'Rize',
         product: 'עיצוב לוגו ואתר רספונסיבי',
-        imgUrl: '/assets/project-rize.png'
+        imgUrl: '/aviv-cv/assets/project-rize.png'
     },
     {
         projectId: 3,
         title: 'Glamspot',
         product: 'מיתוג ועיצוב לוגו',
-        imgUrl: '/assets/project-glamspot.png'
+        imgUrl: '/aviv-cv/assets/project-glamspot.png'
     },
     {
         projectId: 6,
         title: 'Avery Dennison',
         product: 'עיצוב ואפיון מערכות חישוב',
-        imgUrl: '/assets/project-avery-dennison.png'
+        imgUrl: '/aviv-cv/assets/project-avery-dennison.png'
     },
     {
         projectId: 5,
         title: 'Buyon',
         product: 'איפיון ועיצוב אתר סחר',
-        imgUrl: '/assets/project-buyon.png'
+        imgUrl: '/aviv-cv/assets/project-buyon.png'
     }
 ]
 
