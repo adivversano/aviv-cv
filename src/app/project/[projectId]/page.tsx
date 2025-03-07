@@ -373,7 +373,7 @@ export async function generateMetadata({
 
     return {
         // data.title, // dynamically set title based on fetched data
-        title: `${process.env.NEXT_BASE_TITLE} | ${project.title}`,
+        title: `${process.env.NEXT_PUBLIC_BASE_TITLE} | ${project.title}`,
         //   data.description,
         description: project?.description
     };

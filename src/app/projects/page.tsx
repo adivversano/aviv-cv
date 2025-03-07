@@ -43,7 +43,7 @@ const projects = [
 
 export async function generateMetadata() {
     return {
-        title: `${process.env.NEXT_BASE_TITLE} | פרויקטים`,
+        title: `${process.env.NEXT_PUBLIC_BASE_TITLE} | פרויקטים`,
     };
 }
 
