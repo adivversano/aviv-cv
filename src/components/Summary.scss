@@ -109,8 +109,9 @@
             font-size: 18px;
             max-width: 591px;
             color: $text-color-2;
-            opacity: 0.7;
             line-height: 1;
+            margin-right: -12px;
+
             @media screen and (min-width: $breakpoint-lg) {
                 font-size: 22px;
             }

@@ -4,9 +4,10 @@ import styles from './style.module.scss';
 
 type ParagraphProps = {
   paragraph: string
+  className: string
 }
 
-export default function Paragraph({ paragraph }: ParagraphProps) {
+export default function Paragraph({ paragraph, className }: ParagraphProps) {
 
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -18,7 +19,7 @@ export default function Paragraph({ paragraph }: ParagraphProps) {
   return (
     <p
       ref={container}
-      className={styles.paragraph}
+      className={styles.paragraph + ' ' + className}
     >
       {
         words.map((word: string, i: number) => {
