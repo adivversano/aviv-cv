@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './page.module.scss';
 import { Metadata } from 'next';
+import { unstable_noStore } from 'next/cache';
 
 const projects = [
     {
