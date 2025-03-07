@@ -23,7 +23,7 @@ const nextConfig: NextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
-
+    NEXT_PUBLIC_BASE_TITLE: process.env.NEXT_PUBLIC_BASE_TITLE,
 };
 
 export default nextConfig;
