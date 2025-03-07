@@ -1,0 +1,78 @@
+@import "@/styles/basic/variables";
+
+.projects-container {
+    min-height: 100vh;
+    padding: 120px 0;
+    @media screen and (min-width: $breakpoint-lg) {
+        padding: 150px 0;
+    }
+    max-width: 1180px;
+
+    .title {
+        margin: auto;
+        margin-bottom: 60px;
+        font-size: 64px;
+        font-weight: 700;
+        width: fit-content;
+        text-align: center;
+        @media screen and (min-width: $breakpoint-lg) {
+            font-size: 104px;
+        }
+    }
+
+    .projects {
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 50px;
+        @media screen and (min-width: $breakpoint-lg) {
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 80px;
+        }
+
+        .project {
+            &:not(:last-child) {
+                margin-bottom: 50px;
+            }
+            @media screen and (min-width: $breakpoint-lg) {
+                &:not(:last-child) {
+                    margin-bottom: unset;
+                }
+            }
+            .project-graphic-container {
+                margin-bottom: 20px;
+                overflow: hidden;
+                border-radius: 18px;
+                display: flex;
+                @media screen and (min-width: $breakpoint-lg) {
+                    border-radius: 30px;
+                }
+                
+                cursor: pointer;
+                .project-graphic {
+                    aspect-ratio: 540/384;
+                    transition: transform .2s ease;
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+            .product {
+                font-size: 16px;
+                color: $text-color-2;
+                margin-bottom: 5px;
+                @media screen and (min-width: $breakpoint-lg) {
+                    font-size: 24px;
+                }
+            }
+            .project-title {
+                font-size: 40px;
+                color: $text-color;
+                font-weight: 700;
+                @media screen and (min-width: $breakpoint-lg) {
+                    font-size: 64px;
+                }
+            }
+        }
+    }
+}

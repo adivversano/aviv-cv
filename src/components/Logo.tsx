@@ -1,6 +1,5 @@
 
 import Link from 'next/link';
-import './Logo.scss';
 
 const Logo = ({ isDark }: { isDark: boolean }) => {
 

@@ -1,4 +1,5 @@
 import { MyButton } from './MyButton';
+import { SocialButtons } from './SocialButtons';
 
 const Footer = () => {
     return (
@@ -10,6 +11,7 @@ const Footer = () => {
                     </h2>
 
                     <h3 className="sub-title">רוצה לראות מה עוד אפשר לעשות?</h3>
+                    <SocialButtons />
                 </div>
 
                 <div className="left-container">

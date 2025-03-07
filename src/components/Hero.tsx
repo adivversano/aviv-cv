@@ -1,5 +1,4 @@
 import { motion, Variants } from 'framer-motion';
-import './Hero.scss';
 
 const containerVariants: Variants = {
     hidden: {},

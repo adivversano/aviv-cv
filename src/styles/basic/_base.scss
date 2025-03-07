@@ -78,7 +78,7 @@ main {
 
 body {
     margin: 0;
-    font-family: MiriamLibre;
+    font-family: MiriamLibre, sans-serif;
     color: white;
     scroll-behavior: smooth;
 }
@@ -122,7 +122,8 @@ input {
     color: $text-color;
     line-height: 1;
     background-color: $bg-color-2;
-    
+    font-family: MiriamLibre, sans-serif;
+
     &.white {
         color: $text-color;
         &::after {
@@ -141,6 +142,7 @@ input {
 .reset-btn {
     background-color: unset;
     border: none;
+    padding: 0;
 }
 
 .reset-link {
@@ -150,4 +152,39 @@ input {
 
 .primary {
     color: $text-color;
+}
+
+.btn-hover {
+    position: relative;
+    display: inline-block;
+    transition: transform .5s ease, color .3s ease;
+    
+    &::before {
+        content: "";
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: $text-color-3;
+        position: absolute;
+        opacity: 0;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        transition: all 0.3s ease;
+        transform: translate(-50%, 0);
+        transition:
+            opacity 0.3s ease,
+            transform 0.3s ease;
+    }
+
+    &:hover {
+        color: $text-color-3 !important;
+
+        transform: translateY(-5px); /* Move text upward a bit */
+        &::before {
+            opacity: 1;
+            transform: translate(-50%, 15px);
+        }
+    }
 }

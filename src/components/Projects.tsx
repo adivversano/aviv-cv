@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import { MyButton } from './MyButton';
 import Link from 'next/link';
+import { MyButton } from './MyButton';
 
 const projects = [
     {
@@ -16,15 +16,15 @@ const projects = [
         imgUrl: '/aviv-cv/assets/project-mehula.png'
     },
     {
-        projectId: 2,
-        title: 'Differeacting',
-        description: `מיתוג עבוד חברת Differeacting. העוסקת בפיתוח תוכנה של
-        מערכות האתגר היה ליצור אייקון שיהיה מודרני וחדשני שישלב בין שני
-        אותיות לפי בקשת הלקוח`,
-        date: '2024',
-        field: 'פיתוח תוכנה',
-        product: 'עיצוב לוגו ואתר רספונסיבי',
-        imgUrl: '/aviv-cv/assets/project-differeacting.png'
+        projectId: 6,
+        title: 'Avery Dennison',
+        description: `עיצוב ואיפיון מחשבון לחברת אייברי דניסון לניתוח
+        תוצאות נתונים שיעזרו לחברה בהסברה ללקוחות ויתרמו
+        לסגירת עסקאות`,
+        date: '2023',
+        field: 'מסחר מוצר',
+        product: 'עיצוב ואפיון מערכות חישוב',
+        imgUrl: '/aviv-cv/assets/project-avery-dennison.png'
     },
     {
         projectId: 3,
@@ -61,15 +61,15 @@ const projects = [
         imgUrl: '/aviv-cv/assets/project-buyon.png'
     },
     {
-        projectId: 6,
-        title: 'Avery Dennison',
-        description: `עיצוב ואיפיון מחשבון לחברת אייברי דניסון לניתוח
-        תוצאות נתונים שיעזרו לחברה בהסברה ללקוחות ויתרמו
-        לסגירת עסקאות`,
-        date: '2023',
-        field: 'מסחר מוצר',
-        product: 'עיצוב ואפיון מערכות חישוב',
-        imgUrl: '/aviv-cv/assets/project-avery-dennison.png'
+        projectId: 2,
+        title: 'Differeacting',
+        description: `מיתוג עבוד חברת Differeacting. העוסקת בפיתוח תוכנה של
+        מערכות האתגר היה ליצור אייקון שיהיה מודרני וחדשני שישלב בין שני
+        אותיות לפי בקשת הלקוח`,
+        date: '2024',
+        field: 'פיתוח תוכנה',
+        product: 'עיצוב לוגו ואתר רספונסיבי',
+        imgUrl: '/aviv-cv/assets/project-differeacting.png'
     }
 ]
 
@@ -100,7 +100,7 @@ const Projects = () => {
                                     <span>תוצר: {product}</span>
                                 </p>
 
-                                <MyButton className="project-btn" text="לצפייה בפרויקט" as={Link} href={`/project/${projectId}`}/>
+                                <MyButton className="project-btn" text="לצפייה בפרויקט" as={Link} href={`/project/${projectId}`} />
                             </article>
                             <div className="project-graphic-container">
                                 <Image className='project-graphic'

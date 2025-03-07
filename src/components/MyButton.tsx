@@ -11,7 +11,7 @@ import React, {
     text: string;
   } & Omit<ComponentPropsWithoutRef<T>, 'as' | 'className' | 'children'>;
   
-  export function MyButton<T extends ElementType = 'a'>({
+  export function MyButton<T extends ElementType = ('a' | 'button')>({
     as,
     className,
     text,
@@ -19,8 +19,8 @@ import React, {
   }: MyButtonProps<T>) {
     const Component = as || 'a';
     const circleRef = useRef<HTMLSpanElement>(null);
-    // Use HTMLElement for a generic element ref.
-    const btnRef = useRef<HTMLAnchorElement>(null);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const btnRef = useRef<any>(null);
   
     const handleOrigin = (e: React.MouseEvent<HTMLElement>) => {
       if (!circleRef.current || !btnRef.current) return;

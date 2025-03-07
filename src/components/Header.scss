@@ -27,8 +27,11 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        position: relative;
+        z-index: 2;
+        background-color: $bg-color-2;
 
-        @media screen and (min-width: 840px) {
+        @media screen and (min-width: $breakpoint-lg) {
             height: 116px;
         }
 
@@ -58,7 +61,7 @@
                         // padding: 6px 19px;
                         font-size: 16px;
                         font-weight: 500;
-                        @media screen and (min-width: 840px) {
+                        @media screen and (min-width: $breakpoint-lg) {
                             // padding: 8px 24px;
                             font-size: 18px;
                         }
@@ -66,7 +69,7 @@
                     .hamburger-btn {
                         padding: 0;
                     }
-                    @media screen and (min-width: 840px) {
+                    @media screen and (min-width: $breakpoint-lg) {
                         &.projects-btn,
                         &.download-cv-btn {
                             display: block;
@@ -81,6 +84,37 @@
                         }
                     }
                 }
+            }
+        }
+    }
+    .mobile-menu {
+        opacity: 0;
+        position: absolute;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        background-color: $bg-color-2;
+        z-index: 1;
+
+        &.open {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .navbar {
+            display: flex;
+            flex-direction: column;
+            text-align: right;
+            align-items: start;
+            > li {
+                color: $text-color;
+                align-items: center;
+                height: 40px;
+                display: flex;
+                font-size: 18px;
+                * {
+                    color: inherit;
+                }
+
             }
         }
     }
