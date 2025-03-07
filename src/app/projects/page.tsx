@@ -1,8 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './page.module.scss';
-import { Metadata } from 'next';
-import { unstable_noStore } from 'next/cache';
 
 const projects = [
     {
@@ -43,11 +41,10 @@ const projects = [
     }
 ]
 
-export async function generateMetadata(): Promise<Metadata | undefined> {
-    unstable_noStore()
+export async function generateMetadata() {
     return {
         title: `${process.env.NEXT_PUBLIC_BASE_TITLE} | פרויקטים`,
-    }
+    };
 }
 
 async function ProjectPage() {
